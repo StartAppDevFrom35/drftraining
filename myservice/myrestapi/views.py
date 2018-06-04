@@ -15,6 +15,7 @@ class HelloWorld(APIView):
 
     def post(self, request, format=None):
         request_data = request.data
+
         return Response({"message": request_data["message"]},
                         status=status.HTTP_201_CREATED)
 
